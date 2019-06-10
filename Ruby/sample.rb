@@ -118,3 +118,16 @@ end
 
 dvd = DVD.new('dynaso', 2500, 1.5)
 puts dvd.to_s
+
+class Application
+  def create
+    puts "アプリを作ります！"
+    p CS_CHAT_PAYLOAD_VERSION
+    puts "payload version: #{CS_CHAT_PAYLOAD_VERSION}"
+  end
+
+  CS_CHAT_PAYLOAD_VERSION = 1
+end
+
+application = Application.new()
+application.create
