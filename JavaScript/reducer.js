@@ -46,3 +46,5 @@ function createReducer(obj) {
 
 console.log(secondReducer(action, state));
 
+const testFun = () => 'ok';
+console.log(testFun({ type: 'yattaa', payload: 'okokk' }))
