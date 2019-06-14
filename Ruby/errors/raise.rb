@@ -14,6 +14,7 @@ def currency_of(country)
 end
 
 begin
+  # 無効な引数を渡す
   currency = currency_of(:ind)
   puts currency
 rescue => e
