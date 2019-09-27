@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="input1" value="Ao">
+  <input type="text" id="input2" value="Shiro">
+  <input type="text" id="input3" value="">
+  <input type="text" id="input4" value="Aka">
+
+  <button id="button" type="button">実行</button>
+  <script>
+  {
+    // var i = 1;
+    // var elem = document.getElementById('input' + i);
+    // while(elem !== null) {
+    //   if (elem.value === '') {
+    //     return elem.value = new_value
+    //   }
+    //   i++;
+    //   elem = document.getElementById('input' + i);
+    // }
+    // return null;
+
+    const setFirstEmptyValue = (new_value) => {
+      for (let i = 1; true; i++) {
+        const elem = document.getElementById('input' + i);
+        if (elem === null) return null;
+
+        if (elem.value === '') {
+          return elem.value = new_value;
+        }
+      }
+    }
+
+    var buttonEml = document.getElementById('button');
+    buttonEml.onclick = () => {
+      console.log('click!');
+      console.log('setFirstEmptyValueの実行結果: ', setFirstEmptyValue('new_value'));
+    }
+  }
+  </script>
+</body>
+</html>
